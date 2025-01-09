@@ -1,0 +1,47 @@
+.about-section {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a3d);
+  color: #ddd;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.about-info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-item {
+  background: #27274d;
+  border-radius: 8px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.about-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.about-item h3 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.about-item p {
+  font-size: 1em;
+  color: #ddd;
+  line-height: 1.6;
+  margin-top: 10px;
+}

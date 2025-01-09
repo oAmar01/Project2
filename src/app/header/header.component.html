@@ -1,0 +1,25 @@
+<header>
+  <div class="logo">
+    <h2>News Portal</h2>
+  </div>
+  <nav>
+    <ul class="nav-menu">
+      <li><a routerLink="">Home</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/news">News</a></li>
+      <li><a routerLink="/categories">Categories</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="auth-buttons">
+    <ng-container *ngIf="isLoggedIn; else loggedOut">
+      <span>Logged in as {{ username }}</span>
+      <button (click)="logout()">Logout</button>
+    </ng-container>
+    <ng-template #loggedOut>
+      <button (click)="openLogin()">Login</button>
+    </ng-template>
+  </div>
+</header>
+
+<app-login-screen *ngIf="isModalOpen" (closeModal)="closeLogin()" (loginSuccess)="onLoginSuccess($event)"></app-login-screen>

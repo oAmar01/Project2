@@ -1,0 +1,43 @@
+header {
+  background: #121226;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-menu li {
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+
+.nav-menu li:hover {
+  background-color: #27274d;
+}
+
+.auth-buttons button {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.auth-buttons button:hover {
+  background: #45a045;
+}
+
+.logged-in-text {
+  margin-right: 10px;
+}

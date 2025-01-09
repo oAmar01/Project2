@@ -1,0 +1,31 @@
+<div class="news-container">
+  <button *ngIf="selectedArticle" (click)="showAllArticles()">Show Other News</button>
+
+  <div *ngIf="!selectedArticle">
+    <div *ngFor="let group of groupedArticles" class="category-section">
+      <h3>{{ group.category | titlecase }}</h3>
+      <div class="articles-grid">
+        <div
+          *ngFor="let article of group.articles"
+          class="article-card"
+          (click)="selectArticle(article)"
+        >
+          <img
+            src="https://media.istockphoto.com/id/1369150014/vector/breaking-news-with-world-map-background-vector.jpg?s=612x612&w=0&k=20&c=9pR2-nDBhb7cOvvZU_VdgkMmPJXrBQ4rB1AkTXxRIKM="
+            alt="Breaking News"
+          />
+          <h3>{{ article.title }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-details" *ngIf="selectedArticle">
+    <h2>{{ selectedArticle.title }}</h2>
+    <p>{{ selectedArticle.content }}</p>
+  </div>
+</div>
+
+
+
+
